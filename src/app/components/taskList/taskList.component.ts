@@ -3,10 +3,16 @@ import { Task } from "../../models/task";
 import { OnInit } from "@angular/core";
 import { TaskService } from "../../services/task.service";
 import { Router } from "@angular/router";
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-    selector: "task-list-app",
+    selector: "app-task-list",
     templateUrl: "./taskList.component.html",
+    styleUrls: ["./taskList.component.scss"],
+    imports: [MatToolbarModule, MatCardModule, MatButtonModule],
+    standalone: true
 })
 
 export class TaskListComponent implements OnInit {
