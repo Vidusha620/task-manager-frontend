@@ -1,25 +1,24 @@
 <mat-card>
-    <form>
-      <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Title</mat-label>
-        <input matInput [(ngModel)]="task.title" name="title">
-      </mat-form-field>
-  
-      <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Description</mat-label>
-        <textarea matInput [(ngModel)]="task.description" name="description"></textarea>
-      </mat-form-field>
-  
-      <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Status</mat-label>
-        <mat-select [(ngModel)]="task.status" name="status">
-          <mat-option value="TO_DO">To Do</mat-option>
-          <mat-option value="IN_PROGRESS">In Progress</mat-option>
-          <mat-option value="DONE">Done</mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <button mat-raised-button color="primary" (click)="saveTask()">Save</button>
-    </form>
-  </mat-card>
-  
+  <form>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="task.title" name="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="task.description" name="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="task.status" name="status">
+        <mat-option value="TO_DO">To Do</mat-option>
+        <mat-option value="IN_PROGRESS">In Progress</mat-option>
+        <mat-option value="DONE">Done</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="saveTask()">Save</button>
+  </form>
+</mat-card>

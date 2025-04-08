@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TaskListComponent } from "./components/taskList/taskList.component";
+import { TaskFormComponent } from "./components/taskForm/taskForm.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [TaskListComponent, TaskFormComponent]
 })
 export class AppComponent {
   title = 'task-manager-frontend';

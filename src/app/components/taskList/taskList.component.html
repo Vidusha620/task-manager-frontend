@@ -3,16 +3,24 @@
     <span class="spacer"></span>
     <button mat-raised-button color="accent" (click)="createTask()">Add Task</button>
 </mat-toolbar>
-  
-<mat-card *ngFor="let task of tasks" class="task-card">
-    <mat-card-title>{{ task.title }}</mat-card-title>
-    <mat-card-content>
-      <p>{{ task.description }}</p>
-      <p>Status: {{ task.status }}</p>
-</mat-card-content>
-<mat-card-actions>
-      <button mat-button color="primary" (click)="updateTask(task.id!)">Edit</button>
-      <button mat-button color="warn" (click)="deleteTask(task.id!)">Delete</button>
-</mat-card-actions>
-</mat-card>
+
+<div class="task-list-container">
+    <mat-card *ngFor="let task of tasks" class="task-card">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title>{{ task.title }}</mat-card-title>
+                <mat-card-subtitle>
+                    <span class="status-badge" [ngClass]="task.status">{{ task.status }}</span>
+                </mat-card-subtitle>
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="description">{{ task.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="primary" (click)="updateTask(task.id)">Edit</button>
+            <button mat-button color="warn" (click)="deleteTask(task.id)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
   
