@@ -1,9 +1,6 @@
 <mat-toolbar color="primary">
-    <span>Task Manager</span>
-    <span class="spacer"></span>
-    <button mat-raised-button color="accent" (click)="createTask()">Add Task</button>
+    <span>Task List</span>
 </mat-toolbar>
-
 <div class="task-list-container">
     <mat-card *ngFor="let task of tasks" class="task-card">
         <mat-card-header>
