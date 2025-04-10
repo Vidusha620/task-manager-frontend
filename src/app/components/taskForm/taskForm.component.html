@@ -1,20 +1,20 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <span>Task Form</span>
 </mat-toolbar>
 <div class="task-form-container">
   <form>
     <mat-form-field appearance="fill">
-      <mat-label>Title</mat-label>
+      <mat-label><b>Title</b></mat-label>
       <input matInput [(ngModel)]="task.title" name="title">
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
+      <mat-label><b>Description</b></mat-label>
       <textarea matInput [(ngModel)]="task.description" name="description"></textarea>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Status</mat-label>
+      <mat-label><b>Status</b></mat-label>
       <mat-select [(ngModel)]="task.status" name="status">
         <mat-option value="TO_DO">To Do</mat-option>
         <mat-option value="IN_PROGRESS">In Progress</mat-option>
@@ -22,7 +22,7 @@
       </mat-select>
     </mat-form-field>
 <div class="form-actions">
-    <button mat-raised-button color="primary" (click)="saveTask()">Save</button>
+    <button mat-raised-button (click)="saveTask()">Save</button>
 </div>
-  </form>
+</form>
 </div>

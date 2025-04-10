@@ -119,3 +119,20 @@ mat-card-actions {
     text-align: center;
     color: #666;
 } 
+
+span{
+    color:grey;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+
+  .mat-toolbar {
+    background-color: #5a6394;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
